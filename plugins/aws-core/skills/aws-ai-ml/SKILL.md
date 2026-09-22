@@ -4,19 +4,19 @@ description: >
   Selects, deploys, and customizes AI models on Amazon SageMaker. Fine-tuning
   (SFT, DPO, RLVR, RLAIF), model selection, dataset preparation, evaluation,
   deployment to SageMaker endpoints or Bedrock, inference optimization and
-  endpoint diagnostics. Covers the full lifecycle from planning through
-  production. Use when fine-tuning models on SageMaker, choosing/selecting which
-  base model to customize or fine-tune from SageMaker Hub, finding a model to
-  deploy without fine-tuning, transforming datasets for training, checking data
-  readiness, evaluating model quality, deploying to endpoints, benchmarking or
-  optimizing inference, setting up IAM roles and S3 buckets for training jobs,
-  or managing a SageMaker Managed MLflow app. Also use to check endpoint health,
-  diagnose failures, debug latency or errors, or view container logs and
-  CloudWatch metrics. Covers Serverless Model Customization, Nova and OSS
-  deployment paths, and PySDK v3. NOT for Ground Truth labeling, Feature Store,
-  or general-purpose AWS infrastructure.
+  endpoint diagnostics. Use when fine-tuning models on SageMaker, choosing which
+  base model to customize or fine-tune from SageMaker JumpStart or SageMaker
+  Hub, finding a model to deploy without fine-tuning, transforming datasets for
+  training, checking data readiness, evaluating model quality, deploying to
+  endpoints, benchmarking or optimizing inference, setting up IAM roles and S3
+  buckets for training jobs, or managing a SageMaker Managed MLflow app. Also
+  use to check endpoint health, diagnose failures, debug latency or errors, or
+  view container logs and CloudWatch metrics. Covers Serverless Model
+  Customization, Nova and OSS deployment, and PySDK v3. NOT for Ground Truth
+  labeling, Feature Store, or general AWS infrastructure. For Bedrock runtime or
+  control-plane work, use amazon-bedrock.
 metadata:
-  version: "4"
+  version: "5"
 ---
 
 # AWS AI/ML Model Customization
@@ -45,6 +45,7 @@ Match the user's intent to the appropriate reference folder and load only that c
 
 ## Rules
 
+- **Service boundary.** This skill covers SageMaker. For Bedrock model invocation, Bedrock Agents, Knowledge Bases, Guardrails, or AgentCore, use the `amazon-bedrock` skill. If the user asks for a model on AWS without naming a service, compare SageMaker and Bedrock or ask one service-choice question. Do not select a service by default.
 - **Progressive disclosure.** Load only the reference folder relevant to the current user intent. Do not load all references at once.
 - **Best-effort help.** If the user's request falls outside this skill's references, do not dead-end the conversation. Help them using general AWS knowledge and documentation, and inform the user that the guidance is not covered by this skill's validated workflows.
 - **Usage attribution.** Before running any AWS CLI command or packaged script, set `export AWS_SDK_UA_APP_ID=AWSSkill-SageMaker`.

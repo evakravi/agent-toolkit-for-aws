@@ -55,7 +55,7 @@ Quick defaults (verify current availability — new models are added frequently,
 
 - **General purpose / reasoning**: Claude Sonnet
 - **Fast + cheap**: Claude Haiku or Nova Micro
-- **Open-source / fine-tuning**: Llama
+- **Open-source / fine-tuning on Bedrock**: Llama. For fine-tuning or hosting an open-weight model on SageMaker, use the `aws-ai-ml` skill.
 - **Multilingual**: Cohere Command or Claude
 - **Code generation**: Claude Sonnet or Llama
 
@@ -66,7 +66,7 @@ Decision framework — choose based on:
 | Reasoning depth | Claude Opus/Sonnet for complex tasks, Haiku/Nova for simple |
 | Cost sensitivity | Nova Micro or Haiku for lowest cost; batch inference for discounted bulk processing |
 | Multimodal needs | Nova Pro/Lite for text + image + video; Claude Sonnet for text + image |
-| Open-source requirement | Llama (fine-tuning available) |
+| Open-source requirement | Llama (Bedrock fine-tuning available). For other open-weight models, use SageMaker JumpStart through the `aws-ai-ml` skill |
 | Latency sensitivity | Haiku or Nova Micro for fastest inference |
 | Context window | Check: `aws bedrock get-foundation-model --model-identifier``<model-id>``` |
 

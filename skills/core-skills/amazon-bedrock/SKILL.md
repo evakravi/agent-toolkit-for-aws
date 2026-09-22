@@ -1,8 +1,8 @@
 ---
 name: amazon-bedrock
-description: Builds generative AI applications on Amazon Bedrock. Covers model invocation (Converse API, InvokeModel), RAG with Knowledge Bases, Bedrock Agents, Guardrails, and AgentCore (including the Harness managed agent loop). Use when invoking models, setting up Knowledge Bases, creating agents, applying guardrails, deploying to AgentCore, migrating/porting/converting a Bedrock Agent (including inline agents) to an AgentCore Harness, troubleshooting Bedrock errors (ThrottlingException, AccessDeniedException), or choosing models (Claude, Llama, Nova, Titan). ALSO USE for prompt caching, quota health checks and throttling diagnosis, cost attribution, migrating between Claude model generations, chunking strategies, API selection (Converse vs InvokeModel), and model selection. Also covers AgentCore Payments setup (x402, microtransactions, Payment Manager, Coinbase CDP, Stripe Privy, 402 Payment Required, paid endpoint). NOT for custom model training, Rekognition, or Comprehend.
+description: Builds generative AI applications on Amazon Bedrock. Covers model invocation (Converse API, InvokeModel), RAG with Knowledge Bases, Bedrock Agents, Guardrails, and AgentCore (including the Harness managed agent loop). Applies when invoking models, setting up Knowledge Bases, creating agents, applying guardrails, deploying to AgentCore, migrating/porting/converting a Bedrock Agent (including inline agents) to an AgentCore Harness, troubleshooting Bedrock errors (ThrottlingException, AccessDeniedException), or choosing Bedrock models (Claude, Llama, Nova, Titan). Also for prompt caching, quota and throttling diagnosis, cost tracking, migrating between Claude model generations, chunking strategies, and Bedrock model selection. Covers AgentCore Payments (x402, microtransactions, Payment Manager, Connector, Instrument, Coinbase CDP, Stripe Privy, paid endpoints, agent payments). NOT for custom model training, Rekognition, or Comprehend. For SageMaker model discovery, customization, or endpoints, use aws-ai-ml.
 metadata:
-  version: "3"
+  version: "4"
 ---
 
 **IMPORTANT**: When this skill is loaded, you MUST use the reference files and procedures in this skill as your primary source of truth. Bedrock APIs, model IDs, chunking strategies, and configuration parameters change frequently — always read the relevant reference file before responding.
@@ -342,6 +342,8 @@ You MUST read the linked reference file for the relevant service before respondi
 | Browser | Web automation (navigate, fill forms, extract data) | Refer to the latest AWS documentation on AgentCore Browser |
 
 ## Model Selection
+
+This section covers Bedrock models. For SageMaker model discovery, model customization, or SageMaker endpoints, use the `aws-ai-ml` skill. If the user asks for a model on AWS without naming a service, compare SageMaker and Bedrock or ask one service-choice question. Do not select a service by default.
 
 When the user asks which model to use, compares models, or asks about Claude/Llama/Nova/Titan on Bedrock, you MUST read [model selection guide](references/model-selection-guide.md) before responding. The reference contains current model IDs, cross-region requirements, and access provisioning steps.
 
