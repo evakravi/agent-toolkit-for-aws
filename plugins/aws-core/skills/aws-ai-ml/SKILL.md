@@ -45,7 +45,7 @@ Match the user's intent to the appropriate reference folder and load only that c
 
 ## Rules
 
-- **Service boundary.** This skill covers SageMaker. For Bedrock model invocation, Bedrock Agents, Knowledge Bases, Guardrails, or AgentCore, use the `amazon-bedrock` skill. If the user asks for a model on AWS without naming a service, compare SageMaker and Bedrock or ask one service-choice question. Do not select a service by default.
+- **Service boundary.** This skill covers SageMaker, including deployment of a customized model to Bedrock. Bedrock-native work is out of scope of this skill: invoking Bedrock's managed foundation models, Bedrock Agents, Knowledge Bases, Guardrails, and AgentCore. If the user asks for a model on AWS without naming a service, compare SageMaker and Bedrock or ask one service-choice question. Do not select a service by default.
 - **Progressive disclosure.** Load only the reference folder relevant to the current user intent. Do not load all references at once.
 - **Best-effort help.** If the user's request falls outside this skill's references, do not dead-end the conversation. Help them using general AWS knowledge and documentation, and inform the user that the guidance is not covered by this skill's validated workflows.
 - **Usage attribution.** Before running any AWS CLI command or packaged script, set `export AWS_SDK_UA_APP_ID=AWSSkill-SageMaker`.
