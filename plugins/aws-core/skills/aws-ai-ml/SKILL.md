@@ -4,17 +4,17 @@ description: >
   Selects, deploys, and customizes AI models on Amazon SageMaker. Fine-tuning
   (SFT, DPO, RLVR, RLAIF), model selection, dataset preparation, evaluation,
   deployment to SageMaker endpoints or Bedrock, inference optimization and
-  endpoint diagnostics. Use when fine-tuning models on SageMaker, choosing which
-  base model to customize or fine-tune from SageMaker JumpStart or SageMaker
-  Hub, finding a model to deploy without fine-tuning, transforming datasets for
-  training, checking data readiness, evaluating model quality, deploying to
-  endpoints, benchmarking or optimizing inference, setting up IAM roles and S3
-  buckets for training jobs, or managing a SageMaker Managed MLflow app. Also
-  use to check endpoint health, diagnose failures, debug latency or errors, or
-  view container logs and CloudWatch metrics. Covers Serverless Model
-  Customization, Nova and OSS deployment, and PySDK v3. NOT for Ground Truth
-  labeling, Feature Store, or general AWS infrastructure. For Bedrock runtime or
-  control-plane work, use amazon-bedrock.
+  endpoint diagnostics. Covers the full lifecycle from planning through
+  production. Use when fine-tuning models on SageMaker, choosing which base
+  model to customize or fine-tune from SageMaker JumpStart or Hub, finding a
+  model to deploy without fine-tuning, transforming datasets for training,
+  checking data readiness, evaluating model quality, deploying to endpoints,
+  benchmarking or optimizing inference, setting up IAM roles and S3 buckets for
+  training jobs, or managing a SageMaker Managed MLflow app. Also use to check
+  endpoint health, diagnose failures, debug latency or errors, or view container
+  logs and CloudWatch metrics. Covers Serverless Model Customization, Nova and
+  OSS deployment, and PySDK v3. NOT for Ground Truth labeling, Feature Store, or
+  general-purpose AWS infrastructure.
 metadata:
   version: "5"
 ---
